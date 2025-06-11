@@ -15,7 +15,7 @@ RUN npm run build
 
 FROM nginx:latest
 #### copy nginx conf
-#COPY ./nginx.conf /etc/nginx/conf.d/default.conf
+COPY ./nginx.conf /etc/nginx/conf.d/default.conf
 
 #### copy artifact build from the 'build environment'
 COPY --from=build /opt/app/dist/nightrep /usr/share/nginx/html
