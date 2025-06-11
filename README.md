@@ -54,7 +54,7 @@ docker build . -t nightscout-reporter
 * Run the docker image with the following command. This will start a container with the name "nightscout-reporter" and expose the port 8088 to the host.
 
 ```
-docker run --name some-nginx -d -p 8088:80 nightscout-reporter
+docker run --name NightScout-Reporter -d -p 8088:80 nightscout-reporter
 ```
 
 > you can choose any port you want to expose to the host. Just replace the 8088 with the port you want to use.
