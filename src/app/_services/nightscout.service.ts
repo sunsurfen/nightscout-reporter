@@ -754,7 +754,7 @@ Du kannst versuchen, in den Einstellungen die Anzahl an auszulesenden Profildate
     if (!this.ps.next()) {
       return data;
     }
-    const diffTime = 5;
+    const diffTime = 1; //changed from 5 to accomodate the juggluco 1 min data
     // gaps between entries that span more than the given minutes
     // are not filled with entries
     const minGapKeep = 16;
@@ -1234,7 +1234,7 @@ schlechten Internetverbindung.`);
 //          total += delta;
 //          if (delta >= t1)t1Count++;
 //          if (delta >= t2)t2Count++;
-            list.gviTotal += Math.sqrt(25 + Math.pow(delta, 2));
+            list.gviTotal += Math.sqrt(timeDelta/60000 + Math.pow(delta, 2)); //adjusted 25 hardocded to timedelta
             glucTotal += entry.gluc;
             if (entry.gluc < glucData.targetLow) {
               rmsTotal += Math.pow(glucData.targetLow - entry.gluc, 2);
