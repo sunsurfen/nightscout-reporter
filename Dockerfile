@@ -1,4 +1,4 @@
-FROM node:20.16.0 AS build
+FROM node:20.19.0 AS build
 
 WORKDIR /opt/app
 ADD . /opt/app
