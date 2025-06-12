@@ -1234,7 +1234,7 @@ schlechten Internetverbindung.`);
 //          total += delta;
 //          if (delta >= t1)t1Count++;
 //          if (delta >= t2)t2Count++;
-            list.gviTotal += Math.sqrt(timeDelta/60000 + Math.pow(delta, 2)); //adjusted 25 hardocded to timedelta
+            list.gviTotal = timeDelta //Math.sqrt(timeDelta/60000 + Math.pow(delta, 2)); //adjusted 25 hardocded to timedelta
             glucTotal += entry.gluc;
             if (entry.gluc < glucData.targetLow) {
               rmsTotal += Math.pow(glucData.targetLow - entry.gluc, 2);
